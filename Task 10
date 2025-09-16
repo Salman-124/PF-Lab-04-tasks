@@ -1,0 +1,61 @@
+#include <stdio.h>
+int main()
+{
+    int akhlaq, honesty, prayer, fasting, zakat, social, conflict;
+    double CI;
+
+    printf("Enter Akhlaq & Manners (0-10): ");
+    scanf("%d", &akhlaq);
+
+    printf("Enter Honesty & Trustworthiness (0-10): ");
+    scanf("%d", &honesty);
+
+    printf("Enter Prayer Regularity (0 = Irregular, 1 = Regular): ");
+    scanf("%d", &prayer);
+
+    printf("Enter Fasting (0 = Never, 1 = Sometimes, 2 = Always): ");
+    scanf("%d", &fasting);
+
+    printf("Enter Zakat & Charity (0-10): ");
+    scanf("%d", &zakat);
+
+    printf("Enter Social Behavior (0-10): ");
+    scanf("%d", &social);
+
+    printf("Enter Conflict Resolution Skills (0-10): ");
+    scanf("%d", &conflict);
+    
+    CI = (akhlaq * 2.5) + (honesty * 2.0) + (prayer * 15.0)
+         + (fasting * 5.0) + (zakat * 1.0) + (social * 1.0)
+         + (conflict * 1.0);
+
+   
+    printf("\nCharacter Index (CI): %.2f\n", CI);
+
+    if (CI >= 85 && CI <= 100) 
+    {
+        printf("Classification: Excellent Muslim Character ✅\n");
+        printf("Remarks: Role model for society\n");
+    }
+    else if (CI >= 70 && CI <= 84) 
+    {
+        printf("Classification: Good Muslim Character 🙂\n");
+        printf("Remarks: Practicing believer\n");
+    }
+    else if (CI >= 50 && CI <= 69)
+    {
+        printf("Classification: Average Character ⚠️\n");
+        printf("Remarks: Needs minor improvement\n");
+    }
+    else if (CI >= 30 && CI <= 49) 
+    {
+        printf("Classification: Needs Improvement ❗\n");
+        printf("Remarks: Work on Akhlaq & Ibadah\n");
+    }
+    else 
+    {
+        printf("Classification: Weak Character ❌\n");
+        printf("Remarks: Requires serious guidance\n");
+    }
+    return 0;
+}
