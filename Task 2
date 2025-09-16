@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() 
+{
+    double num1, num2, result;
+    char op;
+    printf("Enter two integers with space :");
+    scanf("%lf %lf",&num1,&num2);
+    printf("Enter the operator (+,-,* /):");
+    scanf(" %c",&op);
+    
+    switch(op)
+   { case '+':
+        result=num1+num2;
+        break;
+     case '-':
+        result=num1-num2;
+        break;
+     case '*':
+        result=num1*num2;
+        break;
+     case '/':
+      if (num2 != 0)
+      {
+        result=num1/num2;
+      }
+       else 
+      {
+        printf("Error: Division by zero is not allowed.\n");
+      }
+      break;
+      default:
+        printf("\ninvalid operator\n");
+   }
+   printf("\nThe output of your data entry is %.2lf\n",result);
+   return 0;
+}
