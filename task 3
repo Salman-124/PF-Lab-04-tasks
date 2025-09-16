@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() 
+{
+    double waterLevel;
+    printf("Enter water level in feet: ");
+    scanf("%lf", &waterLevel);
+
+    if (waterLevel < 2) 
+    {
+        printf("No Relief Required\n");
+    } 
+    else if (waterLevel >= 2 && waterLevel <= 4) 
+    {
+        printf("Small Relief Package\n");
+    } 
+    else if (waterLevel > 4 && waterLevel <= 6) 
+    {
+        printf("Medium Relief Package\n");
+    } 
+    else 
+    {
+        printf("Evacuation Required\n");
+    }
+    return 0;
+}
